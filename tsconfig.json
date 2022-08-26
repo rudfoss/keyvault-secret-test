@@ -1,0 +1,21 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "es2017",
+		"module": "commonjs",
+		"lib": ["ES2022"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"downlevelIteration": true,
+		"strictNullChecks": true,
+		"esModuleInterop": true,
+		"baseUrl": "."
+	}
+}
