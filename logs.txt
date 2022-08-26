@@ -1,0 +1,237 @@
+C:\Program Files\nodejs\node.exe -r ts-node/register/transpile-only -r tsconfig-paths/register test.ts config-builder
+Debugger attached.
+azure:identity:info EnvironmentCredential => Found the following environment variables:
+azure:core-client:warning The baseUri option for SDK Clients has been deprecated, please use endpoint instead.
+azure:core-client:warning The baseUri option for SDK Clients has been deprecated, please use endpoint instead.
+azure:core-client:warning The baseUri option for SDK Clients has been deprecated, please use endpoint instead.
+azure:core-client:warning The baseUri option for SDK Clients has been deprecated, please use endpoint instead.
+getting secret
+azure:core-rest-pipeline retryPolicy:info Retry 0: Attempting to send request 2243831d-b3bc-4d39-a768-4c27aaa2a51f
+azure:keyvault-secrets:info Request: {
+  "url": "https://[vault-url].azure.net/secrets/test-secret/?api-version=7.3",
+  "headers": {
+    "accept": "application/json",
+    "accept-encoding": "gzip,deflate",
+    "user-agent": "azsdk-js-keyvault-secrets/4.5.1 core-rest-pipeline/1.9.1 Node/v16.14.0 OS/(x64-Windows_NT-10.0.19044)",
+    "x-ms-client-request-id": "2243831d-b3bc-4d39-a768-4c27aaa2a51f"
+  },
+  "method": "GET",
+  "timeout": 0,
+  "disableKeepAlive": false,
+  "streamResponseStatusCodes": {},
+  "withCredentials": false,
+  "tracingOptions": {
+    "tracingContext": {
+      "_contextMap": {}
+    }
+  },
+  "requestId": "2243831d-b3bc-4d39-a768-4c27aaa2a51f",
+  "allowInsecureConnection": false,
+  "enableBrowserStreams": false
+}
+azure:core-rest-pipeline:info No cached TLS Agent exist, creating a new Agent
+azure:keyvault-secrets:info Response status code: 401
+azure:keyvault-secrets:info Headers: {
+  "cache-control": "no-cache",
+  "pragma": "no-cache",
+  "content-length": "97",
+  "content-type": "application/json; charset=utf-8",
+  "expires": "-1",
+  "www-authenticate": "Bearer authorization=\"https://login.windows.net/8bfbe847-c53a-4dcc-8992-a7ca0b7f8ac6\", resource=\"https://vault.azure.net\"",
+  "x-ms-keyvault-region": "eastus",
+  "x-ms-client-request-id": "2243831d-b3bc-4d39-a768-4c27aaa2a51f",
+  "x-ms-request-id": "2f22dee5-9a03-4026-b05c-da1053fb21d5",
+  "x-ms-keyvault-service-version": "1.9.501.1",
+  "x-ms-keyvault-network-info": "conn_type=Ipv4;addr=80.212.220.241;act_addr_fam=InterNetwork;",
+  "x-content-type-options": "nosniff",
+  "strict-transport-security": "max-age=31536000;includeSubDomains",
+  "date": "Fri, 26 Aug 2022 19:26:36 GMT"
+}
+azure:core-rest-pipeline retryPolicy:info Retry 0: Received a response from request 2243831d-b3bc-4d39-a768-4c27aaa2a51f
+azure:core-rest-pipeline retryPolicy:info Retry 0: Processing 2 retry strategies.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Processing retry strategy throttlingRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Skipped.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Processing retry strategy exponentialRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Skipped.
+azure:core-rest-pipeline retryPolicy:info None of the retry strategies could work with the received response. Returning it.
+azure:identity:info ManagedIdentityCredential - Azure Arc MSI => ManagedIdentityCredential - Azure Arc MSI: The environment variables needed are: IMDS_ENDPOINT and IDENTITY_ENDPOINT
+azure:identity:info ManagedIdentityCredential - Fabric MSI => ManagedIdentityCredential - Fabric MSI: Unavailable. The environment variables needed are: IDENTITY_ENDPOINT, IDENTITY_HEADER and IDENTITY_SERVER_THUMBPRINT
+azure:identity:info ManagedIdentityCredential - AppServiceMSI 2019 => ManagedIdentityCredential - AppServiceMSI 2019: Unavailable. The environment variables needed are: IDENTITY_ENDPOINT and IDENTITY_HEADER.
+azure:identity:info ManagedIdentityCredential - AppServiceMSI 2017 => ManagedIdentityCredential - AppServiceMSI 2017: Unavailable. The environment variables needed are: MSI_ENDPOINT and MSI_SECRET.
+azure:identity:info ManagedIdentityCredential - CloudShellMSI => ManagedIdentityCredential - CloudShellMSI: Unavailable. The environment variable MSI_ENDPOINT is needed.
+azure:identity:info ManagedIdentityCredential - Token Exchange => ManagedIdentityCredential - Token Exchange: Unavailable. The environment variables needed are: AZURE_CLIENT_ID (or the client ID sent through the parameters), AZURE_TENANT_ID and AZURE_FEDERATED_TOKEN_FILE
+azure:identity:info ManagedIdentityCredential - IMDS => ManagedIdentityCredential - IMDS: Pinging the Azure IMDS endpoint
+azure:core-rest-pipeline retryPolicy:info Retry 0: Attempting to send request 43f01802-881b-4168-801d-a45bdb7c4493
+azure:core-rest-pipeline:info Request: {
+  "url": "http://169.254.169.254/metadata/identity/oauth2/token",
+  "headers": {
+    "accept": "application/json",
+    "accept-encoding": "gzip,deflate",
+    "user-agent": "azsdk-js-identity/2.1.0 core-rest-pipeline/1.9.1 Node/v16.14.0 OS/(x64-Windows_NT-10.0.19044)",
+    "x-ms-client-request-id": "43f01802-881b-4168-801d-a45bdb7c4493"
+  },
+  "method": "GET",
+  "timeout": 0,
+  "disableKeepAlive": false,
+  "withCredentials": false,
+  "tracingOptions": {
+    "tracingContext": {
+      "_contextMap": {}
+    }
+  },
+  "requestId": "43f01802-881b-4168-801d-a45bdb7c4493",
+  "allowInsecureConnection": true,
+  "enableBrowserStreams": false
+}
+azure:core-rest-pipeline retryPolicy:error Retry 0: Received an error from request 43f01802-881b-4168-801d-a45bdb7c4493
+azure:core-rest-pipeline retryPolicy:info Retry 0: Maximum retries reached. Returning the last received response, or throwing the last received error.
+azure:identity:info ManagedIdentityCredential - IMDS => ManagedIdentityCredential - IMDS: The Azure IMDS endpoint is available
+azure:identity:info ManagedIdentityCredential - IMDS => ManagedIdentityCredential - IMDS: Using the Azure IMDS endpoint coming from the environment variable MSI_ENDPOINT=undefined, and using the cloud shell to proceed with the authentication.
+azure:identity:info IdentityClient: sending token request to [http://169.254.169.254/metadata/identity/oauth2/token?resource=https%3A%2F%2Fvault.azure.net&api-version=2018-02-01]
+azure:core-rest-pipeline retryPolicy:info Retry 0: Attempting to send request 4aa212d6-14e2-43e7-8308-ed14e3915c21
+azure:core-rest-pipeline:info Request: {
+  "url": "http://169.254.169.254/metadata/identity/oauth2/token?resource=REDACTED&api-version=2018-02-01",
+  "headers": {
+    "accept": "application/json",
+    "metadata": "REDACTED",
+    "accept-encoding": "gzip,deflate",
+    "user-agent": "azsdk-js-identity/2.1.0 core-rest-pipeline/1.9.1 Node/v16.14.0 OS/(x64-Windows_NT-10.0.19044)",
+    "x-ms-client-request-id": "4aa212d6-14e2-43e7-8308-ed14e3915c21"
+  },
+  "method": "GET",
+  "timeout": 0,
+  "disableKeepAlive": false,
+  "withCredentials": false,
+  "requestId": "4aa212d6-14e2-43e7-8308-ed14e3915c21",
+  "allowInsecureConnection": true,
+  "enableBrowserStreams": false
+}
+azure:core-rest-pipeline retryPolicy:error Retry 0: Received an error from request 4aa212d6-14e2-43e7-8308-ed14e3915c21
+azure:core-rest-pipeline retryPolicy:info Retry 0: Processing 2 retry strategies.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Processing retry strategy throttlingRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Skipped.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Processing retry strategy exponentialRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Retry strategy exponentialRetryStrategy retries after 825
+azure:core-rest-pipeline retryPolicy:info Retry 1: Attempting to send request 4aa212d6-14e2-43e7-8308-ed14e3915c21
+azure:core-rest-pipeline:info Request: {
+  "url": "http://169.254.169.254/metadata/identity/oauth2/token?resource=REDACTED&api-version=2018-02-01",
+  "headers": {
+    "accept": "application/json",
+    "metadata": "REDACTED",
+    "accept-encoding": "gzip,deflate",
+    "user-agent": "azsdk-js-identity/2.1.0 core-rest-pipeline/1.9.1 Node/v16.14.0 OS/(x64-Windows_NT-10.0.19044)",
+    "x-ms-client-request-id": "4aa212d6-14e2-43e7-8308-ed14e3915c21"
+  },
+  "method": "GET",
+  "timeout": 0,
+  "disableKeepAlive": false,
+  "withCredentials": false,
+  "requestId": "4aa212d6-14e2-43e7-8308-ed14e3915c21",
+  "allowInsecureConnection": true,
+  "enableBrowserStreams": false
+}
+azure:core-rest-pipeline retryPolicy:error Retry 1: Received an error from request 4aa212d6-14e2-43e7-8308-ed14e3915c21
+azure:core-rest-pipeline retryPolicy:info Retry 1: Processing 2 retry strategies.
+azure:core-rest-pipeline retryPolicy:info Retry 1: Processing retry strategy throttlingRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 1: Skipped.
+azure:core-rest-pipeline retryPolicy:info Retry 1: Processing retry strategy exponentialRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 1: Retry strategy exponentialRetryStrategy retries after 1044
+azure:core-rest-pipeline retryPolicy:info Retry 2: Attempting to send request 4aa212d6-14e2-43e7-8308-ed14e3915c21
+azure:core-rest-pipeline:info Request: {
+  "url": "http://169.254.169.254/metadata/identity/oauth2/token?resource=REDACTED&api-version=2018-02-01",
+  "headers": {
+    "accept": "application/json",
+    "metadata": "REDACTED",
+    "accept-encoding": "gzip,deflate",
+    "user-agent": "azsdk-js-identity/2.1.0 core-rest-pipeline/1.9.1 Node/v16.14.0 OS/(x64-Windows_NT-10.0.19044)",
+    "x-ms-client-request-id": "4aa212d6-14e2-43e7-8308-ed14e3915c21"
+  },
+  "method": "GET",
+  "timeout": 0,
+  "disableKeepAlive": false,
+  "withCredentials": false,
+  "requestId": "4aa212d6-14e2-43e7-8308-ed14e3915c21",
+  "allowInsecureConnection": true,
+  "enableBrowserStreams": false
+}
+azure:core-rest-pipeline retryPolicy:error Retry 2: Received an error from request 4aa212d6-14e2-43e7-8308-ed14e3915c21
+azure:core-rest-pipeline retryPolicy:info Retry 2: Processing 2 retry strategies.
+azure:core-rest-pipeline retryPolicy:info Retry 2: Processing retry strategy throttlingRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 2: Skipped.
+azure:core-rest-pipeline retryPolicy:info Retry 2: Processing retry strategy exponentialRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 2: Retry strategy exponentialRetryStrategy retries after 3828
+azure:core-rest-pipeline retryPolicy:info Retry 3: Attempting to send request 4aa212d6-14e2-43e7-8308-ed14e3915c21
+azure:core-rest-pipeline:info Request: {
+  "url": "http://169.254.169.254/metadata/identity/oauth2/token?resource=REDACTED&api-version=2018-02-01",
+  "headers": {
+    "accept": "application/json",
+    "metadata": "REDACTED",
+    "accept-encoding": "gzip,deflate",
+    "user-agent": "azsdk-js-identity/2.1.0 core-rest-pipeline/1.9.1 Node/v16.14.0 OS/(x64-Windows_NT-10.0.19044)",
+    "x-ms-client-request-id": "4aa212d6-14e2-43e7-8308-ed14e3915c21"
+  },
+  "method": "GET",
+  "timeout": 0,
+  "disableKeepAlive": false,
+  "withCredentials": false,
+  "requestId": "4aa212d6-14e2-43e7-8308-ed14e3915c21",
+  "allowInsecureConnection": true,
+  "enableBrowserStreams": false
+}
+azure:core-rest-pipeline retryPolicy:error Retry 3: Received an error from request 4aa212d6-14e2-43e7-8308-ed14e3915c21
+azure:core-rest-pipeline retryPolicy:info Retry 3: Maximum retries reached. Returning the last received response, or throwing the last received error.
+azure:identity:info AzureCliCredential => getToken() => Using the scope https://vault.azure.net/.default
+azure:identity:info AzureCliCredential => getToken() => SUCCESS. Scopes: https://vault.azure.net/.default.
+azure:identity:info ChainedTokenCredential => getToken() => Result for AzureCliCredential: SUCCESS. Scopes: https://vault.azure.net/.default.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Attempting to send request 2243831d-b3bc-4d39-a768-4c27aaa2a51f
+azure:keyvault-secrets:info Request: {
+  "url": "https://[vault-url].azure.net/secrets/test-secret/?api-version=7.3",
+  "headers": {
+    "accept": "application/json",
+    "accept-encoding": "gzip,deflate",
+    "user-agent": "azsdk-js-keyvault-secrets/4.5.1 core-rest-pipeline/1.9.1 Node/v16.14.0 OS/(x64-Windows_NT-10.0.19044)",
+    "x-ms-client-request-id": "2243831d-b3bc-4d39-a768-4c27aaa2a51f",
+    "authorization": "REDACTED"
+  },
+  "method": "GET",
+  "timeout": 0,
+  "disableKeepAlive": false,
+  "streamResponseStatusCodes": {},
+  "withCredentials": false,
+  "tracingOptions": {
+    "tracingContext": {
+      "_contextMap": {}
+    }
+  },
+  "requestId": "2243831d-b3bc-4d39-a768-4c27aaa2a51f",
+  "allowInsecureConnection": false,
+  "enableBrowserStreams": false
+}
+azure:keyvault-secrets:info Response status code: 200
+azure:keyvault-secrets:info Headers: {
+  "cache-control": "no-cache",
+  "pragma": "no-cache",
+  "content-type": "application/json; charset=utf-8",
+  "expires": "-1",
+  "x-ms-keyvault-region": "eastus",
+  "x-ms-client-request-id": "2243831d-b3bc-4d39-a768-4c27aaa2a51f",
+  "x-ms-request-id": "0211198f-a3c4-4668-98b1-bc3008d03649",
+  "x-ms-keyvault-service-version": "1.9.501.1",
+  "x-ms-keyvault-network-info": "conn_type=Ipv4;addr=80.212.220.241;act_addr_fam=InterNetwork;",
+  "x-ms-keyvault-rbac-assignment-id": "056802f5-69d8-42b1-b056-3ca54c8404c2",
+  "x-ms-keyvault-rbac-cache": "ra_age=623;da_age=623;rd_age=623;brd_age=4364;dec_lev=2;",
+  "x-content-type-options": "nosniff",
+  "strict-transport-security": "max-age=31536000;includeSubDomains",
+  "date": "Fri, 26 Aug 2022 19:28:29 GMT",
+  "content-length": "326"
+}
+azure:core-rest-pipeline retryPolicy:info Retry 0: Received a response from request 2243831d-b3bc-4d39-a768-4c27aaa2a51f
+azure:core-rest-pipeline retryPolicy:info Retry 0: Processing 2 retry strategies.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Processing retry strategy throttlingRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Skipped.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Processing retry strategy exponentialRetryStrategy.
+azure:core-rest-pipeline retryPolicy:info Retry 0: Skipped.
+azure:core-rest-pipeline retryPolicy:info None of the retry strategies could work with the received response. Returning it.
+getSecret: 1:53.908 (m:ss.mmm)
+{ secret: 'test-secret-from-east-us-key-vault' }
+Waiting for the debugger to disconnect...
