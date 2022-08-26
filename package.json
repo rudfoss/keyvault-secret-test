@@ -22,6 +22,7 @@
     "@azure/identity": "^2.1.0",
     "@azure/keyvault-secrets": "^4.5.1",
     "dotenv": "^16.0.1",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0"
   }
 }

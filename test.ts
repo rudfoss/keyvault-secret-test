@@ -7,10 +7,12 @@ logger.setLogLevel("info")
 
 // import { AppConfigurationClient } from "@azure/app-configuration"
 import { SecretClient } from "@azure/keyvault-secrets"
-import { DefaultAzureCredential } from "@azure/identity"
+import { DefaultAzureCredential, AzurePowerShellCredential, AzureCliCredential } from "@azure/identity"
 
 const start = async () => {
 	const cred = new DefaultAzureCredential()
+	// const cred = new AzureCliCredential()
+	// const cred = new AzurePowerShellCredential()
 	// const configClient = new AppConfigurationClient(process.env["APPCONFIG_URI"]!, cred)
 	const secretClient = new SecretClient(process.env["KEYVAULT_URI"]!, cred)
 
